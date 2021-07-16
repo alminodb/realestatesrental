@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'MuseoModerno', cursive;
+	color: #fff;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	background-color: #eee;
+	overflow-x: hidden;
+}
+
+.alert-container{
+	position: fixed;
+	width: 500px;
+	background-color: #eee;
+	box-shadow: -8px 9px 1px 1px rgba(0,0,0,.8);
+	top: -20%;
+
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 1;
+
+	transition: top 0.2s ease;
+}
+
+.welcome{
+	font-family: 'Dancing Script', cursive;
+	font-size: 60px;
+	color: #eee;
+	margin-top: -50px;
+}
+
+.alert-message{
+	padding: 15px 15px;
+	color: #333;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.navigation{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	left: 100vw;
+	background-color: #eee;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: left 0.2s ease;
+}
+
+.navigation-links{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.navigation-links li{
+    list-style: none;
+}
+
+.navigation-links li a{
+    padding: 10px;
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    color: #262626;
+    border-radius: 3px;
+}
+.navigation-links li a:hover{
+    background: gray;
+}
+.navigation-links button{
+	padding: 10px;
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    color: #262626;
+    border-radius: 3px;
+    border: none;
+}
+.navigation-links button:hover{
+	background-color: gray;
+	cursor: pointer;
+}
+
+.header{
+	position: relative;
+	width: 100vw;
+	height: 800px;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('slike/header_bcg.jpg');
+	background-attachment: fixed;
+	overflow: hidden;
+}
+
+.title{
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -40%);
+	cursor: default;
+	user-select: none;
+}
+
+.header-title{
+	font-size: 7vh;
+	text-decoration: underline;
+	font-weight: bold;
+	text-shadow: 5px 5px #000;
+}
+
+.header-title span{
+	color: #5383d3;
+}
+
+.logreg{
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%);
+}
+
+.menu{
+	position: absolute;
+	top: 40px;
+	right: 100px;
+	font-size: 30px;
+}
+
+.menu i:hover{
+	cursor: pointer;
+	color: #5383d3;
+}
+
+#menu-close i{
+	color: #000;
+}
+
+#menu-close i:hover{
+	color: #5383d3;
+}
+
+.description{
+	width: 100vw;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.description h2{
+	color: #000;
+}
+
+.tabs{
+	width: 100vw;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 80px 0;
+}
+
+.tab{
+	position: relative;
+	width: 400px;
+	height: 600px;
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #000;
+}
+
+.img{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	top: 80px;
+	width: 180px;
+}
+
+p.description{
+	position: relative;
+	width: 100%;
+	font-size: 23px;
+	text-align: center;
+	color: #000;
+	font-weight: bold;
+}
+
+.btn-container{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	top: -5%;
+}
+
+a.button {
+	position: relative;
+	padding: 0.5em 1.7em;
+	margin: 0 0.1em 0.1em 0;
+	border: 0.16em solid rgba(255, 255, 255, 0);
+	background-color: #333;
+	border-radius: 3px;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: #ffffff;
+	text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+	text-align: center;
+	transition: all 0.2s;
+	font-size: 17px;
+}
+
+a.button:hover {
+	background-color: #1f2022;
+}
+
+.btn-logreg{
+	position: relative;
+	padding: 0.5em 1.7em;
+	margin: 0 0.1em 0.1em 0;
+	border-radius: 3px;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: #ffffff;
+	text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+	text-align: center;
+	transition: all 0.2s;
+	font-size: 17px;
+	user-select: none;
+}
+
+.login{
+	background-color: transparent;
+	border: 1px solid #000;
+}
+
+.login:hover{
+	background-color: #5383d3;
+	border-color: transparent;
+	cursor: pointer;
+}
+
+.register{
+	margin-left: 10px;
+	background-color: #5383d3;
+	border: 1px solid transparent;
+}
+
+.register:hover{
+	border-color: #000;
+	cursor: pointer;
+}
+
+.city{
+	position: relative;
+	width: 100vw;
+	height: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-image: url('slike/city.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+/* -------------------------- FOOTER ------------------- */
+.footer-distributed{
+	/*margin-top: 50px;*/
+	background: #1a1a1a;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100vw;
+	font: bold 16px sans-serif;
+	text-align: left;
+	padding: 50px 60px 40px;
+	overflow: hidden;
+}
+
+.footer-distributed .footer-left{
+	float: left;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Roboto', cursive;
+	margin: 0 0 10px;
+	text-shadow: 1px 1px #000;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+	text-shadow: 1px 1px #000;
+}
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #eee;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+.footer-distributed .footer-right{
+	float: right;
+}
+
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+.footer-links a:hover{
+	color: #5383d3;
+}
+
+.footer-right button:hover{
+	background-color: #1f2022;
+	cursor: pointer;
+}
+/* ---------------LOGIN AND REGISTER POPUP------------------ */
+
+.login-bcg{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	background-color: #333;
+
+	display: flex;
+	justify-content: center;
+
+	z-index: 1;
+	left: 100vw;
+	transition: left 0.2s ease;
+}
+
+.logreg-container{
+	position: relative;
+	top: 10%;
+	width: 600px;
+	min-height: 300px;
+	padding: 25px 0;
+	border-radius: 3px;
+}
+
+.logreg-title h1{
+	color: gray;
+	text-align: center;
+	font-size: 35px;
+}
+
+.logreg-container form{
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.logreg-container input{
+	margin-top: 10px;
+}
+
+.logreg-container input[type=text],
+.logreg-container input[type=password]{
+	width: 60%;
+	font-size: 25px;
+	padding: 10px;
+	outline: none;
+	box-sizing: border-box;
+
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid gray;
+	color: gray;
+
+	transition: all 0.4s ease;
+
+	border-radius: 3px;
+}
+
+.logreg-btn{
+	width: 60%;
+	font-size: 25px;
+	padding: 10px;
+	outline: none;
+	box-sizing: border-box;
+
+	background-color: transparent;
+	border: 2px solid gray;
+	color: gray;
+
+	transition: all 0.4s ease;
+	margin-top: 50px;
+	border-radius: 3px;
+}
+
+.logreg-btn:hover{
+	cursor: pointer;
+	background-color: gray;
+	color: #333;
+}
+
+.logreg-message{
+	margin-top: 50px;
+	text-align: center;
+}
+
+.logreg-message h3{
+	color: gray;
+}
+
+.logreg-close{
+	position: absolute;
+	right: 100px;
+	top: 20px;
+
+	font-size: 45px;
+	color: gray;
+}
+
+.logreg-close:hover{
+	color: #fff;
+	cursor: pointer;
+}
+
+.register-bcg{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+
+	background-color: #333;
+
+	display: flex;
+	justify-content: center;
+	left: 100vw;
+
+	transition: left 0.2s ease;
+}
